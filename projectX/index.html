@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
-    <!-- <script src="/main.js"></script> -->
     <title>Project 1</title>
 </head>
 <body>
@@ -30,7 +29,7 @@
                         <li><a href="#">Community</a></li>
                     </ul>
                 </nav>
-                <button class="button" style="display: none;">Get Started</button>  
+                <button class="button | display-sm-none  display-mb-inline-flex ">Get Started</button>  
             </div>
         </div>
     </header>
@@ -147,20 +146,6 @@
         </div>
     </footer>
 
-
-    <!-- no estaria pudiendo hacer funcionarl js por alguna razon -->
-
-    <script>
-        const navToggle = document.querySelector(".mobile-nav-toggle");
-        const primaryNav = document.querySelector(".primary-navigation");
-
-    navToggle.addEventListener("click", ()=>{
-    primaryNav.hasAttribute("data-visible") 
-    ? navToggle.setAttribute("aria-expanded", false) 
-    : navToggle.setAttribute("aria-expanded", true);
-    primaryNav.toggleAttribute("data-visible");
-    });
-    </script>
-    <!-- <script src="/main.js"></script> -->
+    <script src="/main.js"></script>
 </body>
 </html>
