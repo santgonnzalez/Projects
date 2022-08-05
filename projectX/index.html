@@ -8,26 +8,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
+    <!-- <script src="/main.js"></script> -->
     <title>Project 1</title>
 </head>
 <body>
     <header class="primary-header">
         <div class="container">
-            <a href=""><img src="/img/logo.svg" alt="Logo"></a>
-            <button class="mobile-nav-toggle" aria-controls="primary-navegation">
-            <span class="visually-hidden">Menu</span></button>
-            <img class="icon-hamburger" src="/img/icon-hamburger.svg" alt="" aria-hidden="true">
-            <img class="icon-close" src="/img/icon-close.svg" alt="" aria-hidden="true">
-            <nav class="primary-navigation">
-                <ul aria-label="Primary" rule="list" class="nav-list" id="primary-navigation">
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Product</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Community</a></li>
-                </ul>
-            </nav>
-            <button class="button">Get Started</button>
+            <div class="nav-wrapper">
+                <a href=""><img src="/img/logo.svg" alt="Logo"></a>
+                <button class="mobile-nav-toggle"  aria-controls="primary-navigation"  aria-expanded="false">
+                <span class="visually-hidden">Menu</span></button>
+                <img class="icon-hamburger" src="/img/icon-hamburger.svg" alt="" aria-hidden="true">
+                <img class="icon-close" src="/img/icon-close.svg" alt="" aria-hidden="true">
+                <nav class="primary-navigation" id="primary-navigation">
+                    <ul aria-label="Primary" rule="list" class="nav-list" >
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </nav>
+                <button class="button" style="display: none;">Get Started</button>  
+            </div>
         </div>
     </header>
     <main>
@@ -142,6 +145,21 @@
             </div>
         </div>
     </footer>
-    
+
+
+    <!-- no estaria pudiendo hacer funcionarl js por alguna razon -->
+
+    <script>
+        const navToggle = document.querySelector(".mobile-nav-toggle");
+        const primaryNav = document.querySelector(".primary-navigation");
+
+    navToggle.addEventListener("click", ()=>{
+    primaryNav.hasAttribute("data-visible") 
+    ? navToggle.setAttribute("aria-expanded", false) 
+    : navToggle.setAttribute("aria-expanded", true);
+    primaryNav.toggleAttribute("data-visible");
+    });
+    </script>
+    <!-- <script src="/main.js"></script> -->
 </body>
 </html>
