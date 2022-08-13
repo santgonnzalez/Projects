@@ -1,11 +1,11 @@
 * {
     font-family: 'Silkscreen', cursive;
-    color: aliceblue;
+    color: #000000;
 } 
 
 body {
     margin: 0;
-    background-color: #225974;
+    background-color: #164633;
 }
 
 .container {
@@ -19,7 +19,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 75px);
     grid-template-rows: 160px repeat(5, 75px);
-    background-color: rgb(64, 194, 150);
+    background-color: rgb(208, 108, 42);
     padding: 15px;
     border-radius: 30px;
     box-shadow: 15px 10px 0px 5px #00000033;
@@ -32,13 +32,41 @@ button {
     border-radius: 32px;
     font-size: 1.5em;
     border: 2px;
-    background-color: rgb(64, 194, 150);
-    box-shadow: 5px 5px 10px -8px #00000080, -5px -5px 15px 3px #00ffc11f;
+    background-color: rgb(188, 105, 49);
+    box-shadow: 5px 5px 10px -8px #00000080, -5px -5px 15px 3px #ff84001f;
 }
 
 button:active {
-    background-color: #24a88788;
+    background-color: #a8682488;
 }
 button:focus {
     outline: none;
+}
+
+.display{
+    grid-column: 1 / -1;
+    padding: 15px;
+    display: flex;
+    margin: 10px 10px 20px;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #16372a;
+    border-radius: 30px;
+    text-align: right;
+    justify-content: space-between;
+    word-break: break-all;
+    box-shadow: 3px 3px 5px 10px #00000030; 
+    color: white ;
+}
+
+.column2 {
+    grid-column: span 2;
+}
+
+#past-value{
+    font-size: 1.5em;
+}
+
+#actual-value{
+    font-size: 2em;
 }
