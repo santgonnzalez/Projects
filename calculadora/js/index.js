@@ -4,12 +4,13 @@ const displayActualValue = document.getElementById("actual-value");
 const numbersBotton = document.querySelectorAll(".num");
 const OperadoresBotton = document.querySelectorAll(".operador");
 
-const display = new Display(displayActualValue, displayPastValue);
+const display = new Display(displayPastValue,displayActualValue);
 
 numbersBotton.forEach(boton => {
-    boton.addEventListener('click', () => display.newNumero(boton.innerHTML));
+    boton.addEventListener('click', () => display.newNum(boton.innerHTML));
 });
 
-botonesOperadores.forEach(boton => {
+OperadoresBotton.forEach(boton => {
     boton.addEventListener('click', () => display.computar(boton.value));
-})
+});
+
