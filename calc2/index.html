@@ -12,9 +12,11 @@
     <h1>Calculadora HTML</h1>
 
     <input type="text" id="op1" placeholder="Operador 1">
-    <input type="text" id="operador" placeholder="+,-,*,/" >
+    <input type="text" id="operacion" placeholder="+,-,*,/" >
     <input type="text" id="op2" placeholder="Operador 2">    <!--  el id es como el enlace entre el html y el js, usando despues .getelementbyid -->
-    <input type="submit" value="Calcular" id="calcular">
+    <input type="submit" value="Calcular" id="calcular" onclick=calcular()>
+
+    <p id="resultado"> </p>
 
 
 

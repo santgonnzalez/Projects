@@ -1,10 +1,17 @@
 body {
     font-family: sans-serif;
     text-align: center;
+    color: black;
 }
 
 input {
     display: block;
     margin: auto;
     margin-bottom: 10px;
+    border-radius: 15px;
+    
+}
+
+h1{
+    color: blue;
 }
